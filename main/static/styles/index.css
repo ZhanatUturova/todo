@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #263238;
+    font-family: 'Raleway', sans-serif;
+}
+
+section {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create__container {
+    width: 80%;
+}
+
+.create__input {
+    padding: 12px 10px;
+    font-size: 18px;
+    width: 80%;
+    margin-right: 10px;
+}
+.create__btn {
+    padding: 12px 20px;
+    background-color: #CE93D8;
+    border: 1px solid #CE93D8;
+    color: #FFF;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.create__btn:active {
+    border:1px solid #CE93D8;
+    box-shadow: 2px 2px 5px 3px #FCE4EC;
+}
+
+.todo__container {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.todo__item {
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 24%;
+    padding: 10px 15px;
+    background-color: #C8E6C9;
+    margin-bottom: 20px;
+}
+
+.todo__item.marked {
+    background-color: #FFE082;
+    border: 2px solid #FAD66A;
+}
+.todo__item.done {
+    background-color: #E0E0E0; 
+    color: #757575;
+}
+.todo__item.done h4,
+.todo__item.done p,
+.todo__item.done span {
+    color: #757575;
+    text-decoration: line-through;
+}
+
+.todo__item.done img {
+    opacity: 0.5;
+}
+.todo__item_header {
+    display: flex;
+    align-items: center;
+    min-height: 35px;
+    
+}
+
+.todo__item_header h4 {
+    font-size: 18px;
+    font-family: sans-serif;
+
+}
+.todo__item_header h4 > a {
+    text-decoration: none;
+}
+.todo__item_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo__item_footer p {
+    font-size: 15px;
+    font-family: sans-serif;
+
+}
+
+.todo__item_footer .action__buttons {
+    display: flex;
+}
+
+.todo__item_footer img {
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Блок с книгами */
+
+.books__form {
+    width: 92%;
+    display: flex;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input__box {
+    width: 48%;
+
+}
+.book__input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-right: 0;
+    outline: none;
+}
+
+.book__btn {
+    outline: none;
+}
+
+.book__container {
+    width: 92%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.book_item {
+    width: 24%;
+    background:#F8E0F7;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid #F6CEF5;
+    padding: 10px 15px;
+    color: #FA5882;
+}
+
+.book_item_footer {
+    float: right;
+}
+
+.book_txt {
+    color: #424242;
+    margin-bottom: 11px;
+    font-size: 18px;
+}
+
+.book_item > .book_title {
+    font-size: 25px;
+    text-align: center;
+}
+
+.book_price {
+    color: red;
+    font-size: 22px;
+}
+
+.book_item > .book_price {
+    font-size: 30px;
+    text-align: right;
+}
+
+.book_details {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #424242;
+}
+
+.book_marked {
+    background-color:#E6F8E0;
+    border: 2px solid #ECF6CE;
+}
+
+.book_ins_container {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.book_box {
+    padding: 20px 25px;
+    width: 40%;
+}
+
+.book_ins {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.book_ins:last-child {
+    margin-bottom: 0;
+}
+
+.book_description,
+.book_genre {
+    font-weight: normal;
+}
