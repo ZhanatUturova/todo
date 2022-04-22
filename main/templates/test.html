@@ -3,12 +3,37 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'styles/test.css' %}">
+    <title>TODO</title>
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/checkbox.css' %}">
 </head>
 <body>
-    <h2>Это тестовая страница</h2>
+    <section>
+        <div class="create__container">
+            <input type="text" class="create__input" placeholder="Напишите сюда новую задачу">
+            <button class="create__btn">Добавить</button>
+        </div>
+        <div class="todo__container">
+            {% for todo in todo_list %}
+            <div class="todo__item">
+                <div class="todo__item_header">
+                    <label class="checkbox__container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <h4>{{ todo.text }}</h4>
+                </div>
+                <div class="todo__item_footer">
+                    <p>{{ todo.created_at }}</p>
+                    <div class="action__buttons">
+                        <img src="./img/star_yellow.png" alt="star">
+                        <img src="./img/trash_bin.svg" alt="trash_bin">
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
 </body>
 </html>
