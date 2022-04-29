@@ -1,0 +1,29 @@
+.meeting__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.meeting__item_header {
+    flex-wrap: wrap;
+}
+
+.meeting__item_number {
+    width: 100%;
+    margin-top: 9px;
+}
+
+.meeting__comment{
+    max-height: 6rem;
+    overflow: overlay;
+    padding: 0.5rem 1.2rem 0.5rem 0.5rem;
+    margin-right: -5px;
+}
+
+.meeting__item__footer{
+    margin-top: 0.3rem;
+}
+
+.meeting__item_goal{
+    max-width: 85%;
+}

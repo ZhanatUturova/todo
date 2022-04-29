@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meetings</title>
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+    <link rel="stylesheet" href="{% static 'homework/styles/index.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/checkbox.css' %}">
+</head>
+<body>
+    <section>
+        <div class="todo__container">
+            {% for meeting in meetings %}
+            <div class="todo__item meeting__item">
+                <div class="todo__item_header meeting__item_header">
+                    <label class="checkbox__container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <h4>Имя: {{ meeting.persone }}</h4>
+                    <h4 class="meeting__item_number">Номер телефона: {{ meeting.phone_number }}</h4>
+                </div>
+                <p class="meeting__comment">{{ meeting.comment }}</p>
+                <div class="todo__item_footer meeting__item__footer">
+                    <p>{{ meeting.date_of_meeting }}</p>
+                    <div class="action__buttons">
+                        <img src="./img/star_yellow.png" alt="star">
+                        <img src="./img/trash_bin.svg" alt="trash_bin">
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</body>
+</html>

@@ -18,7 +18,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from homework.views import homework, hw_2
+from homework.views import homework, hw_2, show_meetings, show_goals_for_month
 from main.views import homepage, test, second
 
 urlpatterns = [
@@ -28,5 +28,7 @@ urlpatterns = [
     path('test2/', second),
     path('homework/', homework, name='homework'),
     path('hw/', hw_2, name='hw'),
+    path('meetings/', show_meetings),
+    path('mygoals/', show_goals_for_month),
 ]   + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
     + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
